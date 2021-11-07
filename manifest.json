@@ -1,0 +1,21 @@
+{
+  "name": "Remove Shopify Header",
+  "action": {},
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "Removes Shopify dev docs header",
+  "content_scripts": [{
+    "matches": [
+      "*://shopify.dev/*"
+    ],
+    "js": [
+      "/contentscript.js"
+    ]
+  }],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage"
+  ]
+}
